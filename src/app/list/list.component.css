@@ -1,0 +1,12 @@
+div.article {
+    border: 1px solid black;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}

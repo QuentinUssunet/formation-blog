@@ -1,0 +1,12 @@
+<h2>Liste des Articles</h2>
+<div class="article-list">
+  <div class="article" *ngFor="let article of articles">
+    <h4>
+      Titre : {{ article.title }}      
+      <img src="/assets/edit.svg" (click)="edit(article)" >
+      <img src="/assets/delete.svg" (click)="delete(article)" >
+    </h4>
+    <p class="description">{{ article.description }}</p>
+    <div>{{ article.id }}</div>
+  </div>
+</div>

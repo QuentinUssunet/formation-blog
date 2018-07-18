@@ -1,1 +1,8 @@
-<h1>Blog works !</h1>
+<h1>{{ title }}</h1>
+<div class="boutonAdd"><a (click)="showList = !showList"><button type="button" class="btn btn-secondary btn-lg">Ajouter Article</button></a></div>
+<div class="container">
+  <blog-list #showList [articles]="articles" *ngIf="showList; else showFormTpl" (onDelete)="deleteArticle($event)" (onEdit)="showArticle($event)"></blog-list>
+</div>
+<ng-template #showFormTpl>
+  <blog-edit (onCreate)="handleCreate($event)"></blog-edit>
+</ng-template>
